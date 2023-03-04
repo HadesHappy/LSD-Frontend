@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "PassengerSans";
+  src: url(../public/font/PassengerSans-Regular.otf);
+}
+
+.font-passenger {
+  font-family: "PassengerSans";
+}
+
+.treasury-background {
+  background: linear-gradient(180deg, #0F0F10 0%, #050304 100%);
+}
+
 .App {
   text-align: center;
 }

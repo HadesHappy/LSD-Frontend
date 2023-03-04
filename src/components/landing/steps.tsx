@@ -4,7 +4,7 @@ const Steps = () => {
     <div className="flex md:flex-row flex-col justify-between px-2">
       <div className="pt-12 rounded-3xl max-w-[350px] md:pb-32 bg-[#050304] px-2">
         <div className="bg-[#151617] text-center py-1 w-20 rounded-xl text-[#898D94]"> Step 1</div>
-        <div className="text-white md:text-4xl text-2xl pt-6">
+        <div className="text-white md:text-4xl text-2xl pt-6 font-passenger">
           Staking your assets
         </div>
         <div className="text-[#AFAFAF] pt-6">
@@ -16,7 +16,7 @@ const Steps = () => {
       </div>
       <div className="pt-12 rounded-3xl max-w-[350px] md:pb-28 px-2">
         <div className="bg-[#151617] text-center py-1 w-20 rounded-xl text-[#898D94]"> Step 2</div>
-        <div className="text-white md:text-4xl text-2xl pt-6">
+        <div className="text-white md:text-4xl text-2xl pt-6 font-passenger">
           Governance
         </div>
         <div className="text-[#AFAFAF] pt-6">
@@ -26,9 +26,9 @@ const Steps = () => {
           $LSD tokens must be locked to receive $veLSD. Additionally, community members who volountarily lock their $LSD will receive a multiplier on their staked ETH rewards.
         </div>
       </div>
-      <div className="pt-12 rounded-3xl max-w-[350px] md:pb-32 bg-[#050304] px-2">
+      <div className="pt-12 rounded-3xl max-w-[350px] md:pb-32 bg-[#050304] px-2 pb-10">
         <div className="bg-[#151617] text-center py-1 w-20 rounded-xl text-[#898D94]"> Step 3</div>
-        <div className="text-white md:text-4xl text-2xl pt-6">
+        <div className="text-white md:text-4xl text-2xl pt-6 font-passenger">
           Future Proofing
         </div>
         <div className="text-[#AFAFAF] pt-6">

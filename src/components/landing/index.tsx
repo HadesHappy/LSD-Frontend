@@ -3,6 +3,9 @@ import Social from "./social";
 import Vision from './vision';
 import Work from './work';
 import Steps from './steps';
+import Treasury from "./treasury";
+import FAQ from "./faq";
+import Footer from "./footer";
 
 const Landing = () => {
   return (
@@ -20,6 +23,9 @@ const Landing = () => {
           <Steps />
         </div>
       </div>
+      <Treasury />
+      <FAQ />
+      <Footer />
     </div>
   )
 }

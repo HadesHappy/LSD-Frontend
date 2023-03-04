@@ -4,7 +4,7 @@ const Vision = () => {
       <div className="text-[#AFAFAF]">
         *ecosystem
       </div>
-      <div className="md:text-5xl text-2xl text-white flex flex-row items-center gap-5 pt-5">
+      <div className="md:text-5xl text-2xl text-white flex flex-row items-center gap-5 pt-5 font-passenger">
         The LSD Vision
         <img className="hidden md:block" src='/assets/vision.png' alt='vision' />
       </div>

@@ -8,7 +8,7 @@ const Vision = () => {
         The LSD Vision
         <img className="hidden md:block" src='/assets/vision.png' alt='vision' />
       </div>
-      <div className="flex md:flex-row flex-col justify-between gap-10 items-start text-[#AFAFAF] pt-5 text-[18px] font-suisse">
+      <div className="flex md:flex-row flex-col justify-between gap-10 items-start text-[#AFAFAF] pt-5 text-[16px] sm:text-[18px] font-suisse">
         <div className="md:max-w-[450px]">
           Staking has to-date, offered and will likely continue to offer themost reliable yields in DeFi. Liquid staking - or the ability to stakeETH via swapping for a liquid asset,
           has emerged as the leader in this DeFi ecosystem.

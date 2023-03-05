@@ -2,7 +2,7 @@
 const Steps = () => {
   return(
     <div className="flex flex-col justify-between lg:flex-row steps-background">
-      <div className="pt-12 rounded-r-3xl lg:max-w-[370px] md:pb-32 bg-[#050304] pr-24 pl-7">
+      <div className="pt-12 rounded-r-3xl lg:max-w-[370px] md:pb-32 bg-[#050304] pr-7 lg:pr-24 pl-7">
         <div className="bg-[#151617] text-center py-1 w-20 rounded-lg text-[#898D94] font-suisse"> Step 1</div>
         <div className="pt-6 text-2xl text-white md:text-4xl font-passenger">
           Staking your assets
@@ -14,7 +14,7 @@ const Steps = () => {
           Rewards tokens can be used in governance decisions with veLSD or liquid DEFI ventures with LS-ETH giving you flexibility to take advantage of other facets of DEFI while earning passive income.
         </div>
       </div>
-      <div className="pt-12 rounded-3xl lg:max-w-[350px] md:pb-28 pl-7 pr-12">
+      <div className="pt-12 rounded-3xl lg:max-w-[350px] md:pb-28 pl-7 pr-7 lg:pr-12">
         <div className="bg-[#151617] text-center py-1 w-20 rounded-lg text-[#898D94] font-suisse"> Step 2</div>
         <div className="pt-6 text-2xl text-white md:text-4xl font-passenger">
           Governance

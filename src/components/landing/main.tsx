@@ -101,14 +101,14 @@ const Main = () => {
       <div className="flex flex-row justify-center">
         <div className="absolute z-7">
           <img
-            className="pt-32 md:pt-10 h-[600px]"
+            className="pt-32 md:pt-10 h-[500px] sm:h-[600px]"
             src="/assets/main.png"
             alt="main"
           />
         </div>
       </div>
       <Header />
-      <div className="bg-[#050505] h-[34vh]" />
+      <div className="bg-[#050505] h-[28vh] sm:h-[34vh]" />
       <div className="px-1 text-center pt-44 md:pt-32">
         <div className="text-5xl text-transparent bg-black font-extrabold font-passenger sm:text-[80px] bg-clip-text">
           Stake with ease,

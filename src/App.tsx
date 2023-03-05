@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
-import Landing from './components/landing';
+import "./App.css";
+import Routes from "./router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Landing />      
-    </div>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 

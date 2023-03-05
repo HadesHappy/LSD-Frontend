@@ -1,4 +1,3 @@
-import { HiArrowUpRight } from "react-icons/hi2";
 import { useState } from "react";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 
@@ -95,67 +94,4 @@ const Header = () => {
   );
 };
 
-const Main = () => {
-  return (
-    <div className="">
-      <div className="flex flex-row justify-center">
-        <div className="absolute z-7">
-          <img
-            className="pt-32 md:pt-10 h-[500px] sm:h-[600px]"
-            src="/assets/main.png"
-            alt="main"
-          />
-        </div>
-      </div>
-      <Header />
-      <div className="bg-[#050505] h-[28vh] sm:h-[34vh]" />
-      <div className="px-1 text-center pt-44 md:pt-32">
-        <div className="text-5xl text-transparent bg-black font-extrabold font-passenger sm:text-[80px] bg-clip-text">
-          Stake with ease,
-        </div>
-        <div className="text-5xl text-transparent font-extrabold font-passenger sm:text-[80px] bg-clip-text custom-gradient">
-          earn with peace
-        </div>
-        <div className="pt-10 text-gray-500 text-[16px] md:text-[20px] font-passenger px-7">
-          Staking with LSD keeps your assets liquid while you earn
-          <span className="inline sm:block"> passive income.</span>
-        </div>
-      </div>
-      <div className="flex flex-row items-center justify-center py-10 mx-auto">
-        <div className="flex flex-row gap-5">
-          <div className="flex flex-row items-center justify-center gap-5 px-6 py-3 text-white bg-black rounded-l-full rounded-r-full cursor-pointer font-passenger">
-            Get Started
-            <HiArrowUpRight />
-          </div>
-          <a
-            href="https://liquid-staking-derivatives.gitbook.io/whitepaper"
-            target="_blink"
-            className=""
-          >
-            <div className="bg-[#F0F1F3] hidden sm:block font-passenger px-6 py-3 rounded-r-full rounded-l-full cursor-pointer">
-              Read documentation
-            </div>
-            <div className="bg-[#F0F1F3] block sm:hidden font-passenger px-6 py-3 rounded-r-full rounded-l-full cursor-pointer">
-              Read document
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="border-gray-500 border-y-[1px] py-7 sm:py-10 md:py-12 font-passenger font-extrabold w-[5000px] gap-5 flex mt-28">
-        {new Array(3).fill(0).map((each, index) => (
-          <div
-            style={{ wordSpacing: 15 }}
-            key={index}
-            className={`${index === 0 ? "loop-anim" : ""}`}
-          >
-            BTC $23,476.09 / ETH $1,647.92 / BNB $300.44 / XRP $0.3808 / ADA
-            $0.3501 / Doge $0.08079 / MATIC $1.22 / SOL $22.08 / Dot $3.33 / LTC
-            $96.05 /
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Main;
+export default Header;

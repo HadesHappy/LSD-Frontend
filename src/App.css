@@ -28,6 +28,23 @@
   background: linear-gradient(180deg, #050304 0%, #0F0F10 100%);
 }
 
+@keyframes animation {
+  from {
+    margin-left: 0px
+  }
+
+  to {
+    margin-left: -1407px
+  }
+}
+
+.loop-anim {
+  animation-name: animation;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 @media (max-width: 1024px) {
   .steps-background {
     background: #050304;

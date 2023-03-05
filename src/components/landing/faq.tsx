@@ -9,14 +9,21 @@ const FAQ = () => {
   const toggle = (e: any) => {
     const accordion = e.target.parentElement;
     const answer = $(accordion).find(".answer");
-    selected?.slideUp();
-    if (selected == null || selected[0] !== answer[0]) {
+    const arrow = $(accordion).find(".arrow");
+
+    $(selected)?.find(".answer").slideUp();
+    $(selected)?.find(".arrow").css("transform", "rotate(0deg)");
+
+    if (selected == null || $(selected).find(".answer")[0] !== answer[0]) {
       answer.slideDown();
+      arrow.css("transform", "rotate(180deg)");
     } else {
       setSelected(null);
+      arrow.css("transform", "rotate(0deg)");
       return;
     }
-    setSelected(answer);
+    arrow.css("transform", "rotate(180deg)");
+    setSelected(accordion);
   };
 
   return (
@@ -35,7 +42,7 @@ const FAQ = () => {
               onClick={toggle}
             >
               {faq.question}
-              <div className="float-right mt-2">
+              <div className="float-right mt-2 duration-150 arrow">
                 <MdKeyboardArrowDown />
               </div>
             </div>

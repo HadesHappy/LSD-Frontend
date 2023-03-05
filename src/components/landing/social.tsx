@@ -22,7 +22,7 @@ const Media = ({ name, icon, link }: Props) => {
 const Social = () => {
   return (
     <div className="vector bg-[#050505]">
-      <div className="text-center mx-auto">
+      <div className="mx-auto text-center">
         <div className="flex flex-row justify-center">
           <div className="absolute w-[400px] h-[500px]">
             <img className="pt-32 -ml-20" src="/assets/dots.png" alt='dots' />
@@ -31,11 +31,11 @@ const Social = () => {
         <div className="text-md text-[#AFAFAF] md:pt-32 pt-20 font-passenger">
           *social media
         </div>
-        <div className="md:text-5xl text-2xl text-white pt-10 font-passenger">
+        <div className="pt-10 text-2xl text-white text-[36px] sm:text-[54px] md:text-[64px] font-passenger font-extrabold">
           Keep in touch
         </div>
         <div className="mx-auto">
-          <div className="flex md:flex-row flex-wrap items-center justify-center gap-10 md:py-32 py-10">
+          <div className="flex flex-wrap items-center justify-center gap-10 px-5 py-10 sm:px-20 md:flex-row md:py-32">
             <Media name='Twitter' icon={<FaTwitter className='w-10 h-10' />} link="https://twitter.com/lsderivatives/"/>
             <Media name='Discord' icon={<FaDiscord className='w-10 h-10' />} link="https://discord.com/invite/lsderivatives/" />
             <Media name='Medium' icon={<BsMedium className='w-10 h-10' />} link="https://lsderivatives.medium.com/"/>

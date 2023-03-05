@@ -1,87 +1,155 @@
-import { FaBolt } from 'react-icons/fa'
-import { HiArrowUpRight } from 'react-icons/hi2'
+import { HiArrowUpRight } from "react-icons/hi2";
+import { useState } from "react";
+import { BsFillLightningChargeFill } from "react-icons/bs";
 
 const Header = () => {
+  const [popup, setPopup] = useState<boolean>(false);
+
+  const togglePopup = () => {
+    setPopup(!popup);
+  };
+
   return (
-    <div className="bg-[#050505] flex flex-row justify-between items-center md:py-7 md:px-10 py-5 px-10">
-      <img className="md:w-14 md:h-14 w-10 h-10" src='/assets/logo.png' alt='logo' />
-      <div className="md:flex md:flex-row md:gap-1 hidden ">
-        <a href="#home" className='z-10'>
-          <div className='cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]'>
+    <div className="bg-[#050505] flex flex-row justify-between items-center md:py-7 md:px-10 py-5 px-3 font-suisse">
+      <div
+        className={`absolute w-screen ${
+          popup ? "h-screen" : "h-0"
+        } overflow-hidden bg-[#050505] top-0 left-0 z-8 flex items-center duration-500`}
+      >
+        <div className="flex flex-col items-center w-full gap-4">
+          <a href="#home" className="z-10">
+            <div className="cursor-pointer rounded-l-full px-5 py-0.5 text-white text-4xl">
+              Home
+            </div>
+          </a>
+          <a href="#Chart" className="z-10">
+            <div className="cursor-pointer rounded-l-full px-5 py-0.5 text-white text-4xl">
+              Chart
+            </div>
+          </a>
+          <a href="#contract" className="z-10">
+            <div className="cursor-pointer rounded-l-full px-5 py-0.5 text-white text-4xl">
+              Contract
+            </div>
+          </a>
+          <a href="#stake" className="z-10">
+            <div className="cursor-pointer rounded-l-full px-5 py-0.5 text-white text-4xl">
+              Stake
+            </div>
+          </a>
+          <a href="#connect" className="z-10">
+            <div className="cursor-pointer rounded-l-full px-5 py-0.5 text-white text-4xl">
+              Connect
+            </div>
+          </a>
+        </div>
+      </div>
+      <img
+        className="relative z-10 w-10 h-10 md:w-14 md:h-14"
+        src="/assets/logo.png"
+        alt="logo"
+      />
+      <div className="absolute hidden lg:flex lg:flex-row md:gap-1 left-[50%] translate-x-[-50%] z-10">
+        <a href="#home" className="z-10">
+          <div className="cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]">
             Home
           </div>
         </a>
-        <a href="#Chart" className='z-10'>
-          <div className='cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]'>
+        <a href="#Chart" className="z-10">
+          <div className="cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]">
             Chart
           </div>
         </a>
-        <a href="Contract" className='z-10'>
-          <div className='cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]'>
+        <a href="#Contract" className="z-10">
+          <div className="cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]">
             Contract
           </div>
         </a>
-        <a href="Stake" className='z-10'>
-          <div className='cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]'>
+        <a href="#Stake" className="z-10">
+          <div className="cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-5 py-0.5 text-white text-md hover:bg-[#4B4B4F]">
             Stake
           </div>
         </a>
-        
       </div>
-      <div className="flex flex-row gap-1 items-center">
-        <div className="flex flex-row justify-center items-center gap-2 rounded-r-full rounded-l-full bg-[#6761D7] text-white py-1 px-3 cursor-pointer">
+      <div className="flex flex-row items-center gap-1">
+        <div className="flex flex-row justify-center items-center gap-2 rounded-r-full rounded-l-full bg-[#6761D7] text-white py-1 pr-2 pl-4 cursor-pointer sm:z-10">
           Buy LSD
-          <div className='w-6 h-6 rounded-full bg-white flex flex-col items-center justify-center'>
-            <FaBolt className='text-[#6761D7]' />
+          <div className="flex flex-col items-center justify-center w-5 h-5 p-[3px] bg-white rounded-full">
+            <BsFillLightningChargeFill className="text-[#6761D7]" />
           </div>
         </div>
-        <div className="hidden md:block">
-          <div className='cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-3 py-1 text-white text-md hover:bg-[#4B4B4F]'>
+        <div className="hidden lg:block">
+          <div className="cursor-pointer border border-[#4B4B4F] rounded-r-full rounded-l-full px-3 py-1 text-white text-md hover:bg-[#4B4B4F]">
             Connect
           </div>
         </div>
-        <img className="md:hidden h-[50%] ml-3 cursor-pointer" src='/assets/menu.png' alt='menu' />
+        <div className="z-10 p-5 cursor-pointer" onClick={togglePopup}>
+          <img
+            className="lg:hidden h-[50%] ml-3"
+            src={`/assets/menu_${popup ? "close" : "open"}.png`}
+            alt="menu"
+          />
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Main = () => {
   return (
     <div className="">
       <div className="flex flex-row justify-center">
-        <div className="absolute z-10">
-          <img className='md:pt-10 pt-32' src='/assets/main.png' alt='main' />
+        <div className="absolute z-7">
+          <img
+            className="pt-32 md:pt-10 h-[600px]"
+            src="/assets/main.png"
+            alt="main"
+          />
         </div>
       </div>
       <Header />
-      <div className="bg-[#050505] h-[30vh]" />
-      <div className="md:pt-32 pt-12 text-center px-1">
-        <div className="md:font-extrabold font-passenger text-transparent md:text-8xl text-5xl bg-clip-text bg-black">
+      <div className="bg-[#050505] h-[34vh]" />
+      <div className="px-1 text-center pt-44 md:pt-32">
+        <div className="text-5xl text-transparent bg-black font-extrabold font-passenger sm:text-[80px] bg-clip-text">
           Stake with ease,
         </div>
-        <div className="md:font-extrabold font-passenger font-bold text-transparent md:text-8xl text-5xl bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+        <div className="text-5xl text-transparent font-extrabold font-passenger sm:text-[80px] bg-clip-text custom-gradient">
           earn with peace
         </div>
-        <div className="md:text-2xl font-passenger text-lg pt-10">
-          Staking with LSD keeps your assets liquid while you earn passive income.
+        <div className="pt-10 text-gray-500 text-[16px] md:text-[20px] font-passenger px-7">
+          Staking with LSD keeps your assets liquid while you earn
+          <span className="inline sm:block"> passive income.</span>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-center mx-auto py-20">
+      <div className="flex flex-row items-center justify-center py-10 mx-auto">
         <div className="flex flex-row gap-5">
-          <div className="flex flex-row font-passenger justify-center items-center gap-5 bg-black text-white px-5 py-3 rounded-r-full rounded-l-full cursor-pointer">
+          <div className="flex flex-row items-center justify-center gap-5 px-6 py-3 text-white bg-black rounded-l-full rounded-r-full cursor-pointer font-passenger">
             Get Started
             <HiArrowUpRight />
           </div>
-          <a href="https://liquid-staking-derivatives.gitbook.io/whitepaper" target='_blink' className="">
-            <div className="bg-[#F0F1F3] font-passenger px-5 py-3 rounded-r-full rounded-l-full cursor-pointer">
+          <a
+            href="https://liquid-staking-derivatives.gitbook.io/whitepaper"
+            target="_blink"
+            className=""
+          >
+            <div className="bg-[#F0F1F3] hidden sm:block font-passenger px-6 py-3 rounded-r-full rounded-l-full cursor-pointer">
               Read documentation
+            </div>
+            <div className="bg-[#F0F1F3] block sm:hidden font-passenger px-6 py-3 rounded-r-full rounded-l-full cursor-pointer">
+              Read document
             </div>
           </a>
         </div>
       </div>
+      <div className="border-gray-500 border-y-[1px] py-7 sm:py-10 md:py-12 font-passenger font-extrabold w-[4000px] ml-[calc(50vw-2000px)] flex justify-center mt-28">
+        <div style={{ wordSpacing: 15 }}>
+          BTC $23,476.09 / ETH $1,647.92 / BNB $300.44 / XRP $0.3808 / ADA
+          $0.3501 / Doge $0.08079 / MATIC $1.22 / SOL $22.08 / Dot $3.33 / LTC
+          $96.05 / BTC $23,476.09 / ETH $1,647.92 / BNB $300.44 / XRP $0.3808
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Main;

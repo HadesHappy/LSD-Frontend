@@ -20,12 +20,12 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-[#050304] flex justify-center pt-16 px-10 md:px-16 lg:px-24 2xl:px-0">
+    <div className="bg-[#050304] flex justify-center pt-16 px-7 md:px-16 lg:px-24 2xl:px-0">
       <div className="w-[1200px]">
-        <div className="text-[#AFAFAF] text-md">
+        <div className="text-[#AFAFAF] text-md font-suisse">
           * Frequently asked questions
         </div>
-        <div className="md:text-5xl text-2xl font-bold font-passenger text-white mb-16">
+        <div className="pt-5 mb-16 text-2xl font-bold text-white md:text-5xl font-passenger">
           Answers here
         </div>
         {faqData.map((faq, index) => (

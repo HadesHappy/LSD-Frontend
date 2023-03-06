@@ -141,18 +141,20 @@ const Main = () => {
           </a>
         </div>
       </div>
-      <div className="border-gray-500 border-y-[1px] py-7 sm:py-10 md:py-12 font-passenger font-extrabold w-[5000px] gap-5 flex mt-28">
-        {new Array(3).fill(0).map((each, index) => (
-          <div
-            style={{ wordSpacing: 15 }}
-            key={index}
-            className={`${index === 0 ? "loop-anim" : ""}`}
-          >
-            BTC $23,476.09 / ETH $1,647.92 / BNB $300.44 / XRP $0.3808 / ADA
-            $0.3501 / Doge $0.08079 / MATIC $1.22 / SOL $22.08 / Dot $3.33 / LTC
-            $96.05 /
-          </div>
-        ))}
+      <div className="w-screen overflow-hidden">
+        <div className="border-gray-500 border-y-[1px] py-7 sm:py-10 md:py-12 font-passenger font-extrabold w-[5000px] gap-5 flex mt-28">
+          {new Array(3).fill(0).map((each, index) => (
+            <div
+              style={{ wordSpacing: 15 }}
+              key={index}
+              className={`${index === 0 ? "loop-anim" : ""}`}
+            >
+              BTC $23,476.09 / ETH $1,647.92 / BNB $300.44 / XRP $0.3808 / ADA
+              $0.3501 / Doge $0.08079 / MATIC $1.22 / SOL $22.08 / Dot $3.33 /
+              LTC $96.05 /
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

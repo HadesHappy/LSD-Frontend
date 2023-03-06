@@ -1,7 +1,11 @@
+import Header from "./header";
+import Main from "./main";
+
 const Stake = () => {
   return (
     <div>
-      <div></div>
+      <Header />
+      <Main />
     </div>
   );
 };

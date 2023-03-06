@@ -21,5 +21,5 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  min-height: 60vh;
+  /* min-height: 60vh; */
 }
